@@ -5,6 +5,7 @@
 <head>
 <title>Homepage-Quotagram</title>
 <link rel="stylesheet" type="text/css" href="stylesqh.css">
+<script type="text/javascript" src="slider.js"></script>
 </head>
 
 
@@ -58,8 +59,12 @@
 					<li><a href="#">Laughter</a></li>
 			</ul>
 			</li><li>
-			<a href="#">Recent</a></li><li>
-			<a href="#">Search Bar</a></li>
+			<a href="#">Recent</a></li>
+			Search Bar
+			<form name="form1" method="post" action="searchresult.php">
+				<input name="search" type="text" size="40" maxlength="50"/>
+				<input type="submit" name="Submit" value"Search"/>
+			</form>
 		</ul>
 	</div>
 </div>	
@@ -67,7 +72,15 @@
 
 <!--body-->
 <div id="body">
-<body>
+<body onLoad="slideA()">
+<div id="left_border"></div>
+<div id="right_border"></div>
+<div id="container">
+<img src="images/Laughter/img01.jpg" id="img"></img>
+<div id="left_holder"><img onclick="slide(-1)" class="left" src="images/arrow_left.png"></img></div>
+<div id="right_holder"><img onclick="slide(1)" class="right" src="images/arrow_right.png"></img></div>
+</div>
+
 
 </body>
 </div>

@@ -8,6 +8,7 @@
 #nav
 {
 	background-color: #FF6600;
+	
 }
 
 #nav_wrapper
@@ -24,6 +25,7 @@
     padding:0;
 	text-align:right;
 	position: relative;
+	margin-bottom: 0px;
 }
 
 #nav ul li {
@@ -75,8 +77,75 @@
 }	
 
 #body{
-	margin: 0;
-	padding: 1px;
+	margin: 0px;
+	padding: 0px;
 	background-color: #FFCC66;
 }
+
+#container{
+	height: 450px;
+	width: 650px;
+	position: relative;
+	margin: auto;
+}
+
+#img{
+	height: 450px;
+	width: 650px;
+	position: absolute;
+	margin:20px;
+	}
 	
+#left_holder{
+		height: 450px;
+		width: 100px;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+		margin:20px;
+		}
+		
+#right_holder{
+		height: 450px;
+		width: 100px;
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		margin:20px;
+		margin-right: -20px;
+		}
+		
+.left{
+	height: 50px;
+	width: 50px;
+	top: 40%;
+	left:0px;
+	position: absolute;
+	}
+	
+.right{
+	height: 50px;
+	width: 50px;
+	top: 40%;
+	right:0px;
+	position: absolute;
+	}
+	
+#left_border{
+	width: 10%;
+	height: 100%;
+	margin-left: 0px;
+	margin-top: 0px;
+	position: absolute;
+	background-color: #B8B8B8;
+}
+
+#right_border{
+	width: 10%;
+	height: 100%;
+	margin-right: 0px;
+	margin-top: 0px;
+	position: absolute;
+	background-color: #B8B8B8;
+	right:8px;
+}
