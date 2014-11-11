@@ -63,8 +63,7 @@
 }
 
 #nav ul ul li{
-	display: block;
-	border: 1px solid #F8F8F8 ;
+	display: inline-block;
 }
 
 #nav ul ul li a,visited{
@@ -75,5 +74,9 @@
 	color: #099;
 }	
 
-
+#body{
+	margin: 0;
+	padding: 1px;
+	background-color: #FFCC66;
+}
 	
