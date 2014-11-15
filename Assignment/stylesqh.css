@@ -21,7 +21,7 @@
 
 #nav ul {
     list-style-type: none;
-    margin-right: 0;
+    margin-right: 0px;
     padding:0;
 	text-align:right;
 	position: relative;
@@ -51,7 +51,9 @@
 }	
 
 #nav ul li:hover ul{
-	display: block;
+	display: inline-block;
+	margin-left: -50px;
+	z-index: 1;
 }
 
 #nav ul ul{
@@ -61,26 +63,35 @@
 	text-align:left;
 	border: 2px solid #222;
 	min-width: 120px;
+	z-index: 1;
 	
 }
 
 #nav ul ul li{
 	display: inline-block;
+	z-index: 1;
 }
 
 #nav ul ul li a,visited{
 	color:#ccc;
+	z-index: 1;
 }
 
 #nav ul ul li a:hover{
 	color: #099;
+	z-index: 1;
 }	
 
 #body{
 	margin: 0px;
 	padding: 0px;
 	background-color: #FFCC66;
+	height: 100%;
+	position: relative;
+	
 }
+
+
 
 #container{
 	height: 450px;
@@ -93,7 +104,7 @@
 	height: 450px;
 	width: 650px;
 	position: absolute;
-	margin:20px;
+	margin-top: 50px;
 	}
 	
 #left_holder{
@@ -102,7 +113,7 @@
 		position: absolute;
 		left: 0px;
 		top: 0px;
-		margin:20px;
+		margin-top:50px;
 		}
 		
 #right_holder{
@@ -111,8 +122,8 @@
 		position: absolute;
 		right: 0px;
 		top: 0px;
-		margin:20px;
-		margin-right: -20px;
+		margin-top:50px;
+		
 		}
 		
 .left{
@@ -147,5 +158,38 @@
 	margin-top: 0px;
 	position: absolute;
 	background-color: #B8B8B8;
-	right:8px;
+	right:0px;
+}
+
+#life{
+	width: 760px;
+	margin: auto;
+	text-align: center;
+	border: 5px solid white;
+	background-color: #339933;
+	
+}
+
+#love{
+	width: 760px;
+	margin: auto;
+	text-align: center;
+	background-color: #990033;
+	border: 5px solid white;
+}
+
+#laughter{
+	width: 760px;
+	margin: auto;
+	text-align: center;
+	background-color: #3366CC;
+	border: 5px solid white;
+}
+
+#footer
+{
+	width: 760px;
+	margin: auto;
+	text-align: center;
+	
 }

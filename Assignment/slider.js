@@ -14,11 +14,11 @@ function slide(x){
 		imagecount = total;
 	}
 	
-	Image.src = "images/Laughter/img0"+ imagecount +".jpg";
+	Image.src = "images/Laughter/img"+ imagecount +".jpg";
 	
 }
 
-window.setInterval(function slideA{
+window.setInterval(function slideA(){
 var Image = document.getElementById('img');
 	imagecount = imagecount + 1;
 	if(imagecount > total)
@@ -31,5 +31,5 @@ var Image = document.getElementById('img');
 		imagecount = total;
 	}
 	
-	Image.src = "images/Laughter/img0"+ imagecount +".jpg";
-	}, 5000);
+	Image.src = "images/Laughter/img"+ imagecount +".jpg";
+	}, 5000);	

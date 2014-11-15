@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 
 <html>
 
@@ -33,11 +33,11 @@
 					<li><a href="#">H</a></li>
 					<li><a href="#">I</a></li>
 					<li><a href="#">J</a></li>
+					<br/>
 					<li><a href="#">K</a></li>
 					<li><a href="#">L</a></li>
 					<li><a href="#">M</a></li>
 					<li><a href="#">N</a></li>
-					<br/>
 					<li><a href="#">O</a></li>
 					<li><a href="#">P</a></li>
 					<li><a href="#">Q</a></li>
@@ -59,12 +59,10 @@
 					<li><a href="#">Laughter</a></li>
 			</ul>
 			</li><li>
-			<a href="#">Recent</a></li>
-			Search Bar
-			<form name="form1" method="post" action="searchresult.php">
-				<input name="search" type="text" size="40" maxlength="50"/>
-				<input type="submit" name="Submit" value"Search"/>
-			</form>
+			<a href="#">Recent</a></li><li>
+			<form id="form" name="form1" method="post" action="searchresult.php"> 
+			<input name="search" type="text" size="25" maxlength="50" placeholder="Enter keyword"/> 
+			<input type="submit" name="Search" value="Search"/></form></li>
 		</ul>
 	</div>
 </div>	
@@ -73,21 +71,49 @@
 <!--body-->
 <div id="body">
 <body onLoad="slideA()">
+
+
 <div id="left_border"></div>
 <div id="right_border"></div>
 <div id="container">
-<img src="images/Laughter/img01.jpg" id="img"></img>
+<img src="images/Laughter/img1.jpg" id="img"></img>
 <div id="left_holder"><img onclick="slide(-1)" class="left" src="images/arrow_left.png"></img></div>
 <div id="right_holder"><img onclick="slide(1)" class="right" src="images/arrow_right.png"></img></div>
 </div>
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<div id="life">
+<br/><h2>Life Quotes</h2><br/>
+</div>
+<br/>
+<div id="love">
+<br/><h2>Love Quotes</h2><br/>
+</div>
+<br/>
+<div id="laughter">
+<br/><h2>Laughter Quotes</h2><br/>
+</div>
+<br/>
+<br/>
+
+<!--footer-->
+<div id="footer"> 	
+Chan Kai Sheng
+		
+</div>
+
+<br/>
+<br/>
 
 </body>
 </div>
 
-<!--footer-->
-<div id="footer">
-</div>
 
 
 
