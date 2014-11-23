@@ -85,9 +85,10 @@
 #body{
 	margin: 0px;
 	padding: 0px;
-	background-color: #FFCC66;
+	background-image: url("images/sky1.jpg");
 	height: 100%;
 	position: relative;
+	
 	
 }
 
@@ -148,7 +149,7 @@
 	margin-left: 0px;
 	margin-top: 0px;
 	position: absolute;
-	background-color: #B8B8B8;
+	background-color: #FFFF33;
 }
 
 #right_border{
@@ -157,33 +158,55 @@
 	margin-right: 0px;
 	margin-top: 0px;
 	position: absolute;
-	background-color: #B8B8B8;
+	background-color: #FFFF33;
 	right:0px;
 }
 
 #life{
 	width: 760px;
+	height: 110px;
 	margin: auto;
 	text-align: center;
-	border: 5px solid white;
+	border: 5px solid #FF6600;
 	background-color: #339933;
-	
+	color: white;
 }
+
 
 #love{
 	width: 760px;
+	height: 110px;
 	margin: auto;
 	text-align: center;
 	background-color: #990033;
-	border: 5px solid white;
+	border: 5px solid #FF6600;
+	color: white;
 }
 
 #laughter{
 	width: 760px;
+	height: 110px;
 	margin: auto;
 	text-align: center;
 	background-color: #3366CC;
-	border: 5px solid white;
+	border: 5px solid #FF6600;
+	color: white;
+}
+
+.float {
+  
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.float:hover, .float:focus, .float:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 #footer

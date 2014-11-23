@@ -1,35 +1,37 @@
 var imagecount = 1;
-var total = 5;
+var total = 10;
+var array = ["Laughter","Life","Love"];
 
-function slide(x){
+function slide(x)
+{
 	var Image = document.getElementById('img');
-	imagecount = imagecount + x;
+	var r = Math.round(Math.random()*2);
+	console.log(array[r])
+	imagecount = imagecount +x;
 	if(imagecount > total)
 	{
 		imagecount = 1;
 	}
-	
 	if(imagecount < 1)
 	{
 		imagecount = total;
 	}
-	
-	Image.src = "images/Laughter/img"+ imagecount +".jpg";
-	
+	Image.src = "images/"+array[r]+"/img"+ imagecount +".jpg";
+
 }
 
 window.setInterval(function slideA(){
-var Image = document.getElementById('img');
+	var Image = document.getElementById('img');
+	var r = Math.round(Math.random()*2);
 	imagecount = imagecount + 1;
 	if(imagecount > total)
 	{
 		imagecount = 1;
 	}
-	
+
 	if(imagecount < 1)
 	{
 		imagecount = total;
 	}
-	
-	Image.src = "images/Laughter/img"+ imagecount +".jpg";
-	}, 5000);	
+	Image.src = "images/"+array[r]+"/img"+ imagecount +".jpg";
+}, 5000);
