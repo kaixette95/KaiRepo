@@ -3,7 +3,7 @@
 <html>
 
 <head>
-<title>Homepage-Quotagram</title>
+<title>Quotagram-Life Quotes</title>
 <link rel="stylesheet" type="text/css" href="stylesqh.css">
 <script type="text/javascript" src="slider.js"></script>
 </head>
@@ -11,8 +11,8 @@
 
 <!--header-->
 <div id="header">
-	<a href="index.html"><img src="images/logo.png" alt="logo" height="150px" width="240px" align="left"></a>
-	<h1><font size="30">WELCOME TO QUOTAGRAM!!</font></h1>
+	<img src="images/logo.png" alt="logo" height="150px" width="240px" align="left">
+	<h1><font size="30">QUOTAGRAM!!</font></h1>
 	<br/>
 	<h2>Your home for inspirational quotes~</h2>
 </div>	
@@ -44,7 +44,6 @@
 					<li><a href="#">R</a></li>
 					<li><a href="#">S</a></li>
 					<li><a href="#">T</a></li>
-					<br/>
 					<li><a href="#">U</a></li>
 					<li><a href="#">V</a></li>
 					<li><a href="#">W</a></li>
@@ -53,14 +52,14 @@
 					<li><a href="#">Z</a></li>
 				</ul>		
 			</li><li>
-			<a href="Categories.php">Categories</a>
+			<a href="#">Categories</a>
 			<ul>
 					<li><a href="#">Life</a></li>
 					<li><a href="#">Love</a></li>
 					<li><a href="#">Laughter</a></li>
 			</ul>
 			</li><li>
-			<a href="Upload.html">Upload</a></li><li>
+			<a href="#">Recent</a></li><li>
 			<form id="form" name="form1" method="post" action="searchresult.php"> 
 			<input name="search" type="text" size="25" maxlength="50" placeholder="Enter keyword"/> 
 			<input type="submit" name="Search" value="Search"/></form></li>
@@ -71,38 +70,64 @@
 
 <!--body-->
 <div id="body">
-<body onLoad="slideA()">
+
 
 <div id="left_border"></div>
 <div id="right_border"></div>
-<div id="container">
-<img src="images/Laughter/img1.jpg" id="img"></img>
-<div id="left_holder"><img onclick="slide(-1)" class="left" src="images/arrow_left.png"></img></div>
-<div id="right_holder"><img onclick="slide(1)" class="right" src="images/arrow_right.png"></img></div>
+
+<div id="form">
+
+<form id="SearchByCategory" action = "" method = "get">
+<label for="category">Choose Category: </label>
+<br/>
+<select name ="category" id="category">
+<option value="Life">Life</option>
+<option value="Love">Love</option>
+<option value="Laughter">Laughter</option>
+</select>
+
+<input type = "submit" value = "Find Category">
+</form>
+
+<?php
+ 
+$servername="localhost";
+$username="khcy4ckg_kai";
+$password="kingdomhearts95";
+$dbname="khcy4ckg_quotes";
+$search=$_GET['category'];
+
+//create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+//check connection
+if($conn->connect_error)
+{
+	die("connection failed: " . $conn->connect_error);
+}
+// echo "<p>Connected successfully</p>";
+
+
+	$sql = "SELECT * FROM quotes WHERE category='$search'";  
+	$result = $conn->query($sql);
+	while($row = $result->fetch_assoc())
+	{		
+		$category = $row['category'];
+		$quotes = $row['quotes'];
+		$author = $row['author'];
+		
+		//echo "Quote ID : $quoteID<br>";
+		echo "Category : $category<br>";
+		echo "Quotes : $quotes<br>";
+		echo "Author : $author<br>";
+		echo "<hr>";	
+	}  
+?>
+
+</div>
 </div>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<div id="life" class="float">
-<h2>Life Quotes</h2>
-</div>
-<br/>
-<div id="love" class="float">
-<h2>Love Quotes</h2>
-</div>
-<br/>
-<div id="laughter" class="float">
-<h2>Laughter Quotes</h2>
-</div>
-<br/>
-<br/>
-<br/>
-<br/>
+
 
 <!--footer-->
 <div id="footer"> 	
@@ -115,6 +140,8 @@
 
 </body>
 </div>
+
+
 
 
 </html>
